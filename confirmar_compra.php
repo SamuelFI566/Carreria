@@ -1,3 +1,4 @@
+<?php
 session_start();
 include 'conexion.php';
 
@@ -6,7 +7,7 @@ if (empty($_SESSION['carrito'])) {
     exit;
 }
 
-// Aquí puedes insertar la lógica para registrar la compra en la base de datos
+//lógica para registrar la compra en la base de datos
 foreach ($_SESSION['carrito'] as $id => $item) {
     // Insertar en la tabla de historial de compras (debes crearla previamente)
     $query = "INSERT INTO historial_compras (user_id, producto_id, cantidad, fecha_compra) VALUES (?, ?, ?, NOW())";

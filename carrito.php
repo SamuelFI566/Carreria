@@ -1,3 +1,4 @@
+<?php
 session_start();
 
 // Inicializa el carrito si no existe
